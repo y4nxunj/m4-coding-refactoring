@@ -1,3 +1,5 @@
+4937641 Task 2.2: extract getVolumeCredits
+26115ee Task 2.1: refactor getAmount and play lookup
 3570f9a Task 1.2: update log
 5235cbc Task 1.1: Fix CheckStyle issues
 843fa87 Initial commit
