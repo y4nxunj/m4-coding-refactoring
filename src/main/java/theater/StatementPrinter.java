@@ -45,8 +45,8 @@ public class StatementPrinter {
                     getPlay(p).getName(), usd(getAmount(p)), p.getAudience()));
             totalAmount += getAmount(p);
         }
-        result.append(String.format("Amount owed is %s%n", usd(totalAmount)));
-        result.append(String.format("You earned %s credits%n", volumeCredits));
+        result.append(String.format("Amount owed is %s%n", usd(getTotalAmount())));
+        result.append(String.format("You earned %s credits%n", getTotalVolumeCredits()));
         return result.toString();
     }
 
@@ -90,7 +90,24 @@ public class StatementPrinter {
     }
 
     private String usd(int amount) {
-        NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
+        final NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
         return frmt.format(amount / Constants.PERCENT_FACTOR);
     }
+
+    private int getTotalAmount() {
+        int result = 0;
+        for (Performance p : invoice.getPerformances()) {
+            result += getAmount(p);
+        }
+        return result;
+    }
+
+    private int getTotalVolumeCredits() {
+        int result = 0;
+        for (Performance p : invoice.getPerformances()) {
+            result += getVolumeCredits(p);
+        }
+        return result;
+    }
+
 }
