@@ -1,3 +1,5 @@
+3471ddf Task 2.4: extract total amount and total volume credits
+8ad3a31 Task 2.3: update log
 ec589cc Task 2.3: add usd helper and remove frmt
 79744b9 Task 2.2: update log
 4937641 Task 2.2: extract getVolumeCredits
