@@ -1,2 +1,3 @@
+3570f9a Task 1.2: update log
 5235cbc Task 1.1: Fix CheckStyle issues
 843fa87 Initial commit
